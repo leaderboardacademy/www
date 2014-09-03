@@ -26,18 +26,6 @@ function isMobileBrowser() {
         }, 1000, 'swing');
     });
 
-    // Pricing tables
-    var priceTables = [".stuff-01", ".stuff-02", ".stuff-03", ".stuff-04", ".stuff-05", ".stuff-06", ".stuff-07", ".stuff-08", ".stuff-09", ".stuff-10"];
-    for (var i = 0; i < priceTables.length; ++i) {
-        var x = priceTables[i];
-        $(x).hover(function() {
-            $(x).css("background", "#eaeaea");
-        });    
-        $(x).mouseleave(function() {
-            $(x).css("background", "transparent");
-        });
-    }
-
     // Initialize Fancybox
     $(".fancybox").fancybox({
         padding: 0,
@@ -231,50 +219,6 @@ function isMobileBrowser() {
                         }
                     });
                 });
-        }
-    });
-
-    jQuery('document').ready(function() {
-        if ($("#gmap").length > 0) {
-            map = new GMaps({
-                el: '#gmap',
-                lat: 25.783275,
-                lng: -80.210248,
-                stylers: {
-                    saturation: -100
-                },
-                scrollwheel: false,
-                zoomControl: true,
-                zoomControlOpt: {
-                    style: 'SMALL',
-                    position: 'TOP_LEFT'
-                },
-                panControl: false,
-                streetViewControl: false,
-                mapTypeControl: false,
-                overviewMapControl: false
-            });
-            // Marker
-            map.drawOverlay({
-                lat: 25.783275,
-                lng: -80.210248,
-                content: '<div class="gmap-overlay-marker"><i class="fa fa-map-marker"></i></div>'
-            });
-
-            // Initialize Google Street View
-            GMaps.createPanorama({
-                el: '#gmap-streetview',
-                lat: 51.508515,
-                lng: -0.125487,
-                scrollwheel: false,
-                addressControl: false,
-                linksControl: true, //shows the arrows and paths within the street
-                pov: {
-                    heading: 245, // The camera heading in degrees relative to true north. North is 0, East is 90, etc.
-                    pitch: 20, // The camera pitch in degrees, relative to the street view. 90 is directly up, -90 is directly down
-                    zoom: 0 // The zoom level. Fully zoomed-out is level 0
-                }
-            });
         }
     });
 
