@@ -18,11 +18,11 @@
   <!-- Styles -->
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" type="text/css" media="all" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" type="text/css" media="all" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" type="text/css" media="all" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" media="all" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css" media="all" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.1/css/bootstrapValidator.min.css" media="all" />
   <link rel="stylesheet" href="/assets/plugins/loltip-0.1.1/loltip.min.css" type="text/css" media="all" />
   <link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="all" />
 
@@ -67,6 +67,15 @@
                   <a title="Courses" href="http://courses.leaderboardacademy.com">
                     <i class="fa fa-graduation-cap"></i>&nbsp;
                     <span>Courses</span>
+                  </a>
+                </li>
+          
+          
+                <li>
+                  <div class="gn-selector"></div>
+                  <a title="Get Involved" href="http://www.leaderboardacademy.com/getinvolved.html">
+                    <i class="fa fa-upload"></i>&nbsp;
+                    <span>Get Involved</span>
                   </a>
                 </li>
           
@@ -129,7 +138,7 @@
           <div class="topic-body">
             
             <script>
-              var generalFeedbackFormConfig = {
+              var general_feedback_FormConfig = {
                     url: "https://docs.google.com/forms/d/1M0e7gYCeu2b1JCwpVM9haqR7iJcBngtBhwYKIYEFkq0/formResponse",
                     fields: [
                         {fid:"name", gid:"entry.961550240"},
@@ -139,19 +148,19 @@
                 };
             </script>
             <div class="formWrapper">
-              <div id="lba-general-feedback-sending" style="display:none;"><i class="fa fa-spinner fa-spin fa-5x"></i></div>
-              <div id="lba-general-feedback-complete" style="display:none;">Message sent.</div>
-              <form id="lba-general-feedback"
+              <div id="lba-general_feedback-sending" style="display:none;"><i class="fa fa-spinner fa-spin fa-5x"></i></div>
+              <div id="lba-general_feedback-complete" style="display:none;">Message sent.</div>
+              <form id="lba-general_feedback"
                 target="_self"
                 class="lba-form-bv"
                 action="javascript:return false;"
                 data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
                 data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
                 data-bv-feedbackicons-validating="glyphicon glyphicon-refresh"
-                data-bv-submitButtons="#lba-general-feedback-send">
+                data-bv-submitButtons="#lba-general_feedback-send">
                 <div class="form-group">
-                  <input id="lba-general-feedback-name"
-                    name="lba-general-feedback-name"
+                  <input id="lba-general_feedback-name"
+                    name="lba-general_feedback-name"
                     placeholder="Your Name"
                     type="text"
                     class="form-control"
@@ -162,8 +171,8 @@
                     data-bv-stringlength-message="Must be less than %s characters long" />
                 </div>
                 <div class="form-group">
-                  <input id="lba-general-feedback-email"
-                    name="lba-general-feedback-email"
+                  <input id="lba-general_feedback-email"
+                    name="lba-general_feedback-email"
                     placeholder="Your Email"
                     type="email"
                     class="form-control"
@@ -176,8 +185,8 @@
                     data-bv-stringlength-message="Must be less than %s characters long" />
                 </div>
                 <div class="form-group">
-                  <textarea id="lba-general-feedback-message"
-                    name="lba-general-feedback-message"
+                  <textarea id="lba-general_feedback-message"
+                    name="lba-general_feedback-message"
                     placeholder="Message"
                     class="form-control"
                     rows="5"
@@ -188,7 +197,7 @@
                     data-bv-stringlength-message="Must be less than %s characters long"></textarea>
                 </div>
                 <p class="form-submit">
-                  <input name="submit" type="submit" class="btn btn-primary" id="lba-general-feedback-send" value="Send" onclick="javascript:postGForm('lba-general-feedback', generalFeedbackFormConfig);" />
+                  <input name="submit" type="submit" class="btn btn-primary" id="lba-general_feedback-send" value="Send" onclick="javascript:postGForm('lba-general_feedback', general_feedback_FormConfig);" />
                 </p>
               </form>
             </div>
@@ -196,16 +205,14 @@
           <div class="dropup">
             <div class="dropdown">
               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownAdvanced" data-toggle="dropdown">
-                Advanced
+                Other Messages
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu dropup" role="menu" aria-labelledby="dropdownAdvanced">
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1" data-toggle="modal" data-target="#modal-course-feedback">Course Feedback</a></li>
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1" data-toggle="modal" data-target="#modal-testimonial">Testimonial</a></li>
   
+                <li role="presentation"><a href="#" role="menuitem" tabindex="-1" data-toggle="modal" data-target="#modal-post_lesson">Post A Lesson</a></li>
                 <li role="presentation"><a href="#" role="menuitem" tabindex="-1" data-toggle="modal" data-target="#modal-sponsors">Advertise with Us</a></li>
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1" data-toggle="modal" data-target="#modal-technical-legal">Technical or Legal</a></li>
-                <li role="presentation"><a href="#" role="menuitem" tabindex="-1" data-toggle="modal" data-target="#modal-custom">Custom</a></li>
+                <li role="presentation"><a href="#" role="menuitem" tabindex="-1" data-toggle="modal" data-target="#modal-technical_legal">Technical or Legal</a></li>
               </ul>
             </div>
           </div>
@@ -216,48 +223,62 @@
   <!-- CONTENT -->
 
   <!-- Modals -->
-  <div class="modal fade" id="modal-course-feedback" tabindex="-1" role="dialog" aria-labelledby="title-course-feedback" aria-hidden="true">
+  
+
+    <div class="modal fade" id="modal-post_lesson" tabindex="-1" role="dialog" aria-labelledby="title-post_lesson" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="title-course-feedback" data-parent="#modal-course-feedback">
-            Course Feedback
-            &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#help-course-feedback"><i class="fa fa-plus-circle"></i></button>
+          <h4 class="modal-title" id="title-post_lesson" data-parent="#modal-post_lesson">
+            Post A Lesson
+            &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#help-post_lesson"><i class="fa fa-question-circle"></i></button>
           </h4>
         </div>
         <div class="modal-body">
-          <div id="help-course-feedback" class="collapse">
-            We are always seeking feedback to improve our courses. If you have any questions, feedback, bug reports, suggestions, fan art, video contribution or any other message specific to a particular class, drop us a message here.
+          <div id="help-post_lesson" class="collapse">
+            Submit a video to potentially be included in a future course.
           </div>
-          
+      
           <script>
-              var courseFeedbackFormConfig = {
-                    url: "https://docs.google.com/forms/d/1MqziV9tcdMP_oqc8Ls6o_GufqLOM0p5oOlqFpzTRbeM/formResponse",
+              var post_lesson_FormConfig = {
+                    url: "https://docs.google.com/forms/d/1qPEnAn1Pi9zjb4FPId24stIj1v7smD5zSVRCXmJC3gY/formResponse",
                     fields: [
-                        {fid:"course", gid:"entry.106732691"},
-                        {fid:"name", gid:"entry.929274930"},
-                        {fid:"email", gid:"entry.484612680"},
-                        {fid:"link", gid:"entry_1845362331"},
-                        {fid:"message", gid:"entry.1398400230"},
+                        {fid:"link", gid:"entry.479904434"},
+                        {fid:"user", gid:"entry.2019680974"},
+                        {fid:"champion", gid:"entry.1979068825"},
+                        {fid:"role", gid:"entry.1757963197"},
+                        {fid:"message", gid:"entry.1830358964"},
                     ],
                 };
           </script>
           <div class="formWrapper">
-            <div id="lba-course-feedback-sending" style="display:none;"><i class="fa fa-spinner fa-spin fa-5x"></i></div>
-            <div id="lba-course-feedback-complete" style="display:none;">Message sent.</div>
-            <form id="lba-course-feedback"
+            <div id="lba-post_lesson-sending" style="display:none;"><i class="fa fa-spinner fa-spin fa-5x"></i></div>
+            <div id="lba-post_lesson-complete" style="display:none;">Sent for review.</div>
+            <form id="lba-post_lesson"
               target="_self"
               class="lba-form-bv"
               action="javascript:return false;"
               data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
               data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
               data-bv-feedbackicons-validating="glyphicon glyphicon-refresh"
-              data-bv-submitbuttons="#lba-course-feedback-send">
+              data-bv-submitbuttons="#lba-post_lesson-send">
               <div class="form-group">
-                <input id="lba-course-feedback-course"
-                  name="lba-course-feedback-course"
-                  placeholder="Course Name"
+                <input id="lba-post_lesson-user"
+                  name="lba-post_lesson-user"
+                  placeholder="YouTube Name"
+                  type="text"
+                  class="form-control"
+                  data-bv-notempty="true"
+                  data-bv-notempty-message="This is required and cannot be empty"
+                  data-bv-stringlength="true"
+                  data-bv-stringlength-max="50"
+                  data-bv-stringlength-message="Must be less than %s characters long" />
+              </div>
+              <div class="form-group">
+                <input id="lba-post_lesson-link"
+                  name="lba-post_lesson-link"
+                  placeholder="YouTube Video Link"
                   type="text"
                   class="form-control"
                   data-bv-notempty="true"
@@ -267,157 +288,275 @@
                   data-bv-stringlength-message="Must be less than %s characters long" />
               </div>
               <div class="form-group">
-                <input id="lba-course-feedback-name"
-                  name="lba-course-feedback-name"
-                  placeholder="Your Name"
+                <select id="lba-post_lesson-champion"
+                  name="lba-post_lesson-champion"
+                  placeholder="Champion"
                   type="text"
                   class="form-control"
                   data-bv-notempty="true"
                   data-bv-notempty-message="This is required and cannot be empty"
                   data-bv-stringlength="true"
-                  data-bv-stringlength-max="75"
+                  data-bv-stringlength-max="50"
                   data-bv-stringlength-message="Must be less than %s characters long" />
+                  <option value="">--- Select Champion ---</option>
+                  <option value="Aatrox">Aatrox</option>
+                  <option value="Ahri">Ahri</option>
+                  <option value="Akali">Akali</option>
+                  <option value="Alistar">Alistar</option>
+                  <option value="Amumu">Amumu</option>
+                  <option value="Anivia">Anivia</option>
+                  <option value="Annie">Annie</option>
+                  <option value="Ashe">Ashe</option>
+                  <option value="Azir">Azir</option>
+                  <option value="Blitzcrank">Blitzcrank</option>
+                  <option value="Brand">Brand</option>
+                  <option value="Braum">Braum</option>
+                  <option value="Caitlyn">Caitlyn</option>
+                  <option value="Cassiopeia">Cassiopeia</option>
+                  <option value="Cho'Gath">Cho'Gath</option>
+                  <option value="Corki">Corki</option>
+                  <option value="Darius">Darius</option>
+                  <option value="Diana">Diana</option>
+                  <option value="Dr. Mundo">Dr. Mundo</option>
+                  <option value="Draven">Draven</option>
+                  <option value="Elise">Elise</option>
+                  <option value="Evelynn">Evelynn</option>
+                  <option value="Ezreal">Ezreal</option>
+                  <option value="Fiddlesticks">Fiddlesticks</option>
+                  <option value="Fiora">Fiora</option>
+                  <option value="Fizz">Fizz</option>
+                  <option value="Galio">Galio</option>
+                  <option value="Gangplank">Gangplank</option>
+                  <option value="Garen">Garen</option>
+                  <option value="Gnar">Gnar</option>
+                  <option value="Gragas">Gragas</option>
+                  <option value="Graves">Graves</option>
+                  <option value="Hecarim">Hecarim</option>
+                  <option value="Heimerdinger">Heimerdinger</option>
+                  <option value="Irelia">Irelia</option>
+                  <option value="Janna">Janna</option>
+                  <option value="Jarvan IV">Jarvan IV</option>
+                  <option value="Jax">Jax</option>
+                  <option value="Jayce">Jayce</option>
+                  <option value="Jinx">Jinx</option>
+                  <option value="Karma">Karma</option>
+                  <option value="Karthus">Karthus</option>
+                  <option value="Kassadin">Kassadin</option>
+                  <option value="Katarina">Katarina</option>
+                  <option value="Kayle">Kayle</option>
+                  <option value="Kennen">Kennen</option>
+                  <option value="Kha'Zix">Kha'Zix</option>
+                  <option value="Kog'Maw">Kog'Maw</option>
+                  <option value="LeBlanc">LeBlanc</option>
+                  <option value="Lee Sin">Lee Sin</option>
+                  <option value="Leona">Leona</option>
+                  <option value="Lissandra">Lissandra</option>
+                  <option value="Lucian">Lucian</option>
+                  <option value="Lulu">Lulu</option>
+                  <option value="Lux">Lux</option>
+                  <option value="Malphite">Malphite</option>
+                  <option value="Malzahar">Malzahar</option>
+                  <option value="Maokai">Maokai</option>
+                  <option value="MasterYi">MasterYi</option>
+                  <option value="Miss Fortune">Miss Fortune</option>
+                  <option value="Mordekaiser">Mordekaiser</option>
+                  <option value="Morgana">Morgana</option>
+                  <option value="Nami">Nami</option>
+                  <option value="Nasus">Nasus</option>
+                  <option value="Nautilus">Nautilus</option>
+                  <option value="Nidalee">Nidalee</option>
+                  <option value="Nocturne">Nocturne</option>
+                  <option value="Nunu">Nunu</option>
+                  <option value="Olaf">Olaf</option>
+                  <option value="Orianna">Orianna</option>
+                  <option value="Pantheon">Pantheon</option>
+                  <option value="Poppy">Poppy</option>
+                  <option value="Quinn">Quinn</option>
+                  <option value="Rammus">Rammus</option>
+                  <option value="Renekton">Renekton</option>
+                  <option value="Rengar">Rengar</option>
+                  <option value="Riven">Riven</option>
+                  <option value="Rumble">Rumble</option>
+                  <option value="Ryze">Ryze</option>
+                  <option value="Sejuani">Sejuani</option>
+                  <option value="Shaco">Shaco</option>
+                  <option value="Shen">Shen</option>
+                  <option value="Shyvana">Shyvana</option>
+                  <option value="Singed">Singed</option>
+                  <option value="Sion">Sion</option>
+                  <option value="Sivir">Sivir</option>
+                  <option value="Skarner">Skarner</option>
+                  <option value="Sona">Sona</option>
+                  <option value="Soraka">Soraka</option>
+                  <option value="Swain">Swain</option>
+                  <option value="Syndra">Syndra</option>
+                  <option value="Talon">Talon</option>
+                  <option value="Taric">Taric</option>
+                  <option value="Teemo">Teemo</option>
+                  <option value="Thresh">Thresh</option>
+                  <option value="Tristana">Tristana</option>
+                  <option value="Trundle">Trundle</option>
+                  <option value="Tryndamere">Tryndamere</option>
+                  <option value="Twisted Fate">Twisted Fate</option>
+                  <option value="Twitch">Twitch</option>
+                  <option value="Udyr">Udyr</option>
+                  <option value="Urgot">Urgot</option>
+                  <option value="Varus">Varus</option>
+                  <option value="Vayne">Vayne</option>
+                  <option value="Veigar">Veigar</option>
+                  <option value="Vel'Koz">Vel'Koz</option>
+                  <option value="Vi">Vi</option>
+                  <option value="Viktor">Viktor</option>
+                  <option value="Vladimir">Vladimir</option>
+                  <option value="Volibear">Volibear</option>
+                  <option value="Warwick">Warwick</option>
+                  <option value="Wukong">Wukong</option>
+                  <option value="Xerath">Xerath</option>
+                  <option value="Xin Zhao">Xin Zhao</option>
+                  <option value="Yasuo">Yasuo</option>
+                  <option value="Yorick">Yorick</option>
+                  <option value="Zac">Zac</option>
+                  <option value="Zed">Zed</option>
+                  <option value="Ziggs">Ziggs</option>
+                  <option value="Zilean">Zilean</option>
+                  <option value="Zyra">Zyra</option>
+                </select>
               </div>
               <div class="form-group">
-                <input id="lba-course-feedback-email"
-                  name="lba-course-feedback-email"
-                  placeholder="Your Email"
-                  type="email"
-                  class="form-control"
-                  data-bv-notempty="true"
-                  data-bv-notempty-message="This is required and cannot be empty"
-                  data-bv-emailaddress="true"
-                  data-bv-emailaddress-message="The email address is not a valid"
-                  data-bv-stringlength="true"
-                  data-bv-stringlength-max="75"
-                  data-bv-stringlength-message="Must be less than %s characters long" />
-              </div>
-              <div class="form-group">
-                <input id="lba-course-feedback-link"
-                  name="lba-course-feedback-link"
-                  placeholder="Optional Links"
+                <input id="lba-post_lesson-role"
+                  name="lba-post_lesson-role"
+                  placeholder="Role"
                   type="text"
-                  class="form-control" />
-              </div>
-              <div class="form-group">
-                <textarea id="lba-course-feedback-message"
-                  name="lba-course-feedback-message"
-                  placeholder="Message"
                   class="form-control"
-                  rows="5"
                   data-bv-notempty="true"
                   data-bv-notempty-message="This is required and cannot be empty"
                   data-bv-stringlength="true"
-                  data-bv-stringlength-max="1000"
-                  data-bv-stringlength-message="Must be less than %s characters long"></textarea>
+                  data-bv-stringlength-max="25"
+                  data-bv-stringlength-message="Must be less than %s characters long" />
+              </div>
+              <div class="form-group">
+                <input id="lba-post_lesson-message"
+                  name="lba-post_lesson-message"
+                  placeholder="Short Description"
+                  type="text"
+                  class="form-control"
+                  data-bv-notempty="true"
+                  data-bv-notempty-message="This is required and cannot be empty"
+                  data-bv-stringlength="true"
+                  data-bv-stringlength-max="140"
+                  data-bv-stringlength-message="Must be less than %s characters long" />
               </div>
               <p class="form-submit">
-                <input name="submit" type="submit" class="btn btn-primary" id="lba-course-feedback-send" value="Send" onclick="javascript:postGForm('lba-course-feedback', courseFeedbackFormConfig)"/>
+                <input name="submit" type="submit" class="btn btn-primary" id="lba-post_lesson-send" value="Send" onclick="javascript:postGForm('lba-post_lesson', post_lesson_FormConfig)"/>
               </p>
             </form>
           </div>
+  
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modals -->
-  <div class="modal fade" id="modal-testimonial" tabindex="-1" role="dialog" aria-labelledby="title-testimonial" aria-hidden="true">
+    <div class="modal fade" id="modal-share_expertise" tabindex="-1" role="dialog" aria-labelledby="title-share_expertise" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="title-testimonial">
-            Testimonial
-            &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#help-testimonial"><i class="fa fa-plus-circle"></i></button>
+          <h4 class="modal-title" id="title-share_expertise" data-parent="#modal-share_expertise">
+            Share Your Expertise
+            &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#help-share_expertise"><i class="fa fa-question-circle"></i></button>
           </h4>
         </div>
         <div class="modal-body">
-          <div id="help-testimonial" class="collapse">
-            Your stories inspire us. Spend a minute to mention how these courses have affected you.
+          <div id="help-share_expertise" class="collapse">
+            Schedule a video sesson with one of our content producers.
           </div>
-          
+      
           <script>
-              var testimonialFormConfig = {
-                    url: "https://docs.google.com/forms/d/1kCUC8ITqkV2hkxfnmmKw4iM8ZFCohgnq0crfZe8pP90/formResponse",
+              var share_expertise_FormConfig = {
+                    url: "https://docs.google.com/forms/d/1o4EV9MHX6z_IdCC6f5dA59td592Jb3Tb8P_VF4Vh5SI/formResponse",
                     fields: [
-                        {fid:"name", gid:"entry.1212631969"},
-                        {fid:"link", gid:"entry.640518003"},
-                        {fid:"message", gid:"entry.28243661"},
+                        {fid:"name", gid:"entry.294246941"},
+                        {fid:"email", gid:"entry.1411941909"},
+                        {fid:"channel", gid:"entry.944413411"},
                     ],
                 };
           </script>
           <div class="formWrapper">
-            <div id="lba-testimonial-sending" style="display:none;"><i class="fa fa-spinner fa-spin fa-5x"></i></div>
-            <div id="lba-testimonial-complete" style="display:none;">Message sent.</div>
-            <form id="lba-testimonial"
+            <div id="lba-share_expertise-sending" style="display:none;"><i class="fa fa-spinner fa-spin fa-5x"></i></div>
+            <div id="lba-share_expertise-complete" style="display:none;">Sent for review.</div>
+            <form id="lba-share_expertise"
               target="_self"
               class="lba-form-bv"
               action="javascript:return false;"
               data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
               data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
               data-bv-feedbackicons-validating="glyphicon glyphicon-refresh"
-              data-bv-submitbuttons="#lba-testimonial-send">
+              data-bv-submitbuttons="#lba-share_expertise-send">
               <div class="form-group">
-                <input id="lba-testimonial-name"
-                  name="lba-testimonial-name"
+                <input id="lba-share_expertise-name"
+                  name="lba-share_expertise-name"
                   placeholder="Your Name"
                   type="text"
                   class="form-control"
                   data-bv-notempty="true"
                   data-bv-notempty-message="This is required and cannot be empty"
                   data-bv-stringlength="true"
-                  data-bv-stringlength-max="75"
+                  data-bv-stringlength-max="50"
                   data-bv-stringlength-message="Must be less than %s characters long" />
               </div>
               <div class="form-group">
-                <input id="lba-testimonial-link"
-                  name="lba-testimonial-link"
-                  placeholder="Optional Links"
-                  type="text"
-                  class="form-control" />
+                <input id="lba-share_expertise-email"
+                    name="lba-share_expertise-email"
+                    placeholder="Enter your email"
+                    type="email"
+                    class="form-control"
+                    data-bv-notempty="true"
+                    data-bv-notempty-message="This is required and cannot be empty"
+                    data-bv-emailaddress="true"
+                    data-bv-emailaddress-message="The email address is not a valid"
+                    data-bv-stringlength="true"
+                    data-bv-stringlength-max="75"
+                    data-bv-stringlength-message="Must be less than %s characters long" />
               </div>
               <div class="form-group">
-                <textarea id="lba-testimonial-message"
-                  name="lba-testimonial-message"
-                  placeholder="Testimonial"
+                <input id="lba-share_expertise-channel"
+                  name="lba-share_expertise-channel"
+                  placeholder="Your YouTube Channel"
+                  type="text"
                   class="form-control"
-                  rows="5"
-                  data-bv-notempty="true"
-                  data-bv-notempty-message="This is required and cannot be empty"
                   data-bv-stringlength="true"
-                  data-bv-stringlength-max="1000"
-                  data-bv-stringlength-message="Must be less than %s characters long"></textarea>
+                  data-bv-stringlength-max="75"
+                  data-bv-stringlength-message="Must be less than %s characters long" />
               </div>
               <p class="form-submit">
-                <input name="submit" type="submit" class="btn btn-primary" id="lba-testimonial-send" value="Send" onclick="javascript:postGForm('lba-testimonial', testimonialFormConfig)"/>
+                <input name="submit" type="submit" class="btn btn-primary" id="lba-share_expertise-send" value="Send" onclick="javascript:postGForm('lba-share_expertise', share_expertise_FormConfig)"/>
               </p>
             </form>
           </div>
+  
         </div>
       </div>
     </div>
   </div>
-  
-  
 
-  <div class="modal fade" id="modal-sponsors" tabindex="-1" role="dialog" aria-labelledby="title-sponsors" aria-hidden="true">
+    <div class="modal fade" id="modal-sponsors" tabindex="-1" role="dialog" aria-labelledby="title-sponsors" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="title-sponsors">
+          <h4 class="modal-title" id="title-sponsors" data-parent="#modal-sponsors">
             Advertise with Us
-            &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#help-sponsors"><i class="fa fa-plus-circle"></i></button>
+            &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#help-sponsors"><i class="fa fa-question-circle"></i></button>
           </h4>
         </div>
         <div class="modal-body">
           <div id="help-sponsors" class="collapse">
             For inquiries related to advertising on our content or sponsoring events, please contact us through this form.
           </div>
-          
+      
           <script>
-              var sponsorsFormConfig = {
+              var sponsors_FormConfig = {
                     url: "https://docs.google.com/forms/d/1CYffaaZoj4ZbKRRAIJUfkg6bKHY3o48qluI4bBNo6nA/formResponse",
                     fields: [
                         {fid:"organization", gid:"entry.1702562025"},
@@ -489,32 +628,33 @@
                   data-bv-stringlength-message="Must be less than %s characters long"></textarea>
               </div>
               <p class="form-submit">
-                <input name="submit" type="submit" class="btn btn-primary" id="lba-sponsors-send" value="Send" onclick="javascript:postGForm('lba-sponsors', sponsorsFormConfig)"/>
+                <input name="submit" type="submit" class="btn btn-primary" id="lba-sponsors-send" value="Send" onclick="javascript:postGForm('lba-sponsors', sponsors_FormConfig)"/>
               </p>
             </form>
           </div>
+  
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal fade" id="modal-technical-legal" tabindex="-1" role="dialog" aria-labelledby="title-technical-legal" aria-hidden="true">
+    <div class="modal fade" id="modal-technical_legal" tabindex="-1" role="dialog" aria-labelledby="title-technical_legal" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="title-technical-legal">
+          <h4 class="modal-title" id="title-technical_legal" data-parent="#modal-technical_legal">
             Technical or Legal
-            &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#help-technical-legal"><i class="fa fa-plus-circle"></i></button>
+            &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#help-technical_legal"><i class="fa fa-question-circle"></i></button>
           </h4>
         </div>
         <div class="modal-body">
-          <div id="help-technical-legal" class="collapse">
+          <div id="help-technical_legal" class="collapse">
             If you discover a technical or legal concern, please contact us here.
           </div>
-          
+      
           <script>
-              var technicalLegalFormConfig = {
+              var technical_legal_FormConfig = {
                     url: "https://docs.google.com/forms/d/1NmbGAlFoG9OK61rXwGWrvizzimS1RDby-Z5y17hGLPY/formResponse",
                     fields: [
                         {fid:"name", gid:"entry.1178254888"},
@@ -525,19 +665,19 @@
                 };
           </script>
           <div class="formWrapper">
-            <div id="lba-technical-legal-sending" style="display:none;"><i class="fa fa-spinner fa-spin fa-5x"></i></div>
-            <div id="lba-technical-legal-complete" style="display:none;">Message sent.</div>
-            <form id="lba-technical-legal"
+            <div id="lba-technical_legal-sending" style="display:none;"><i class="fa fa-spinner fa-spin fa-5x"></i></div>
+            <div id="lba-technical_legal-complete" style="display:none;">Message sent.</div>
+            <form id="lba-technical_legal"
               target="_self"
               class="lba-form-bv"
               action="javascript:return false;"
               data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
               data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
               data-bv-feedbackicons-validating="glyphicon glyphicon-refresh"
-              data-bv-submitbuttons="#lba-technical-legal-send">
+              data-bv-submitbuttons="#lba-technical_legal-send">
               <div class="form-group">
-                <input id="lba-technical-legal-name"
-                  name="lba-technical-legal-name"
+                <input id="lba-technical_legal-name"
+                  name="lba-technical_legal-name"
                   placeholder="Your Name"
                   type="text"
                   class="form-control"
@@ -548,8 +688,8 @@
                   data-bv-stringlength-message="Must be less than %s characters long" />
               </div>
               <div class="form-group">
-                <input id="lba-technical-legal-email"
-                  name="lba-technical-legal-email"
+                <input id="lba-technical_legal-email"
+                  name="lba-technical_legal-email"
                   placeholder="Your Email"
                   type="email"
                   class="form-control"
@@ -562,15 +702,15 @@
                   data-bv-stringlength-message="Must be less than %s characters long" />
               </div>
               <div class="form-group">
-                <input id="lba-technical-legal-subject"
-                  name="lba-technical-legal-subject"
+                <input id="lba-technical_legal-subject"
+                  name="lba-technical_legal-subject"
                   placeholder="Subject"
                   type="text"
                   class="form-control" />
               </div>
               <div class="form-group">
-                <textarea id="lba-technical-legal-message"
-                  name="lba-technical-legal-message"
+                <textarea id="lba-technical_legal-message"
+                  name="lba-technical_legal-message"
                   placeholder="Message"
                   class="form-control"
                   rows="5"
@@ -581,32 +721,33 @@
                   data-bv-stringlength-message="Must be less than %s characters long"></textarea>
               </div>
               <p class="form-submit">
-                <input name="submit" type="submit" class="btn btn-primary" id="lba-technical-legal-send" value="Send" onclick="javascript:postGForm('lba-technical-legal', technicalLegalFormConfig)"/>
+                <input name="submit" type="submit" class="btn btn-primary" id="lba-technical_legal-send" value="Send" onclick="javascript:postGForm('lba-technical_legal', technical_legal_FormConfig)"/>
               </p>
             </form>
           </div>
+  
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal fade" id="modal-custom" tabindex="-1" role="dialog" aria-labelledby="title-custom" aria-hidden="true">
+    <div class="modal fade" id="modal-custom" tabindex="-1" role="dialog" aria-labelledby="title-custom" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="title-custom">
+          <h4 class="modal-title" id="title-custom" data-parent="#modal-custom">
             Custom
-            &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#help-custom"><i class="fa fa-plus-circle"></i></button>
+            &nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#help-custom"><i class="fa fa-question-circle"></i></button>
           </h4>
         </div>
         <div class="modal-body">
           <div id="help-custom" class="collapse">
             ...
           </div>
-          
+      
           <script>
-              var customFormConfig = {
+              var custom_FormConfig = {
                     url: "https://docs.google.com/forms/d/1kv1t1NzJKstQxHWOgRRJj1Sp61_Bx12HXy09LZ1brVw/formResponse",
                     fields: [
                         {fid:"line1", gid:"entry.845855040"},
@@ -661,10 +802,11 @@
                   data-bv-stringlength-message="Must be less than %s characters long"></textarea>
               </div>
               <p class="form-submit">
-                <input name="submit" type="submit" class="btn btn-primary" id="lba-custom-send" value="Send" onclick="javascript:postGForm('lba-custom', customFormConfig)"/>
+                <input name="submit" type="submit" class="btn btn-primary" id="lba-custom-send" value="Send" onclick="javascript:postGForm('lba-custom', custom_FormConfig)"/>
               </p>
             </form>
           </div>
+  
         </div>
       </div>
     </div>
@@ -690,7 +832,7 @@
               </div>
             </div>
             <p><p>Leader Board Academy is an education site used to help gamers enrich their gameplay experience by delivering video based learning material in a structured online course based format.</p>
-<p>The site launched with a primary theme around <a href="http://www.leagueoflegends.com" target="_blank">League of Legends</a>. This is a multiplayer online battle arena desktop video game developed and published by <a href="http://www.riotgames.com" target="_blank">Riot Games</a>, inspired by the mod Defense of the Ancients for the video game Warcraft 3. Players assume the role of a champion, with unique abilities, battling with a team against other player or computer-controlled champions.</p>
+<p><a href="http://www.leagueoflegends.com" target="_blank">League of Legends</a> is a multiplayer online battle arena desktop video game developed and published by <a href="http://www.riotgames.com" target="_blank">Riot Games</a>, inspired by the mod Defense of the Ancients for the video game Warcraft 3. Players assume the role of a champion, with unique abilities, battling with a team against other player or computer-controlled champions.</p>
 </p>
           </div>
           <div class="col-lg-6 col-sm-6">
@@ -715,6 +857,16 @@
                   <div class="follow-title">Courses</div>
                   <div class="follow-icon">
                     <i class="fa fa-graduation-cap"></i>
+                  </div>
+                </a>
+              </li>
+        
+        
+              <li>
+                <a title="Get Involved" href="http://www.leaderboardacademy.com/getinvolved.html">
+                  <div class="follow-title">Get Involved</div>
+                  <div class="follow-icon">
+                    <i class="fa fa-upload"></i>
                   </div>
                 </a>
               </li>
@@ -780,7 +932,7 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.ba-bbq/1.2.1/jquery.ba-bbq.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.1/js/bootstrapValidator.min.js"></script>
     <script type="text/javascript" src="/assets/plugins/loltip-0.1.1/loltip-custom.min.js"></script>
     <script type="text/javascript" src="/assets/js/script-body.js"></script>
     
