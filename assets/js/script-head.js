@@ -13,6 +13,18 @@ function postGForm(formId, formConfig) {
 
             for (var i = 0; i < formConfig.fields.length; ++i) {
                 var field = formConfig.fields[i];
+                if (null != field.preset) {
+                    myData[field.gid] = $.trim(field.preset).substring(0, 1000);;
+                    continue;
+                }
+                if ("radio" == field.special) {
+                    var value = $("input[name=" + formId + "-" + field.fid + "]:checked").val();
+                    value = $.trim(value).substring(0, 1000);
+                    if (isValid) {
+                        myData[field.gid] = value;
+                        continue;
+                    }
+                }
                 if ($("#" + formId + "-" + field.fid).length == 1) {
                     var value = $("#" + formId + "-" + field.fid).val();
                     value = $.trim(value).substring(0, 1000);
@@ -51,6 +63,9 @@ function postGForm(formId, formConfig) {
             }
         }
     }
+    // don't hide, so that return false can show the bootstrap validate error message
+    //$("#" + formId).hide();
+    //$("#" + formId + "-error").show();
     if (typeof ga != 'undefined') {
         ga('send', {
               'hitType': 'event',
