@@ -317,7 +317,6 @@ function buildSurveyDemographics(locJson, lbaSurveyMeta, surveyElement) {
             {fid:"metaCityLatLong", gid:"entry.216532533",   preset:locJson.aeCityLatLong},
             {fid:"metaLang",        gid:"entry.854120841",   preset:locJson.Lang},
             {fid:"metaIp",          gid:"entry.1510079047",  preset:locJson.clientIpAddr},
-            {fid:"metaHost",        gid:"entry.791741575",   preset:locJson.Host},
             {fid:"metaUserAgent",   gid:"entry.742353638",   preset:locJson.UserAgent},
         ],
     };
@@ -434,7 +433,6 @@ function buildSurveyGaming(locJson, lbaSurveyMeta, surveyElement) {
             {fid:"metaCityLatLong", gid:"entry.2114632599",  preset:locJson.aeCityLatLong},
             {fid:"metaLang",        gid:"entry.2032924212",  preset:locJson.Lang},
             {fid:"metaIp",          gid:"entry.1984793658",  preset:locJson.clientIpAddr},
-            {fid:"metaHost",        gid:"entry.805727507",   preset:locJson.Host},
             {fid:"metaUserAgent",   gid:"entry.306052337",   preset:locJson.UserAgent},
         ],
     };
@@ -572,7 +570,6 @@ function buildSurveyPost(locJson, lbaSurveyMeta, surveyElement) {
             {fid:"metaCityLatLong", gid:"entry.1420990632",  preset:locJson.aeCityLatLong},
             {fid:"metaLang",        gid:"entry.843984724",   preset:locJson.Lang},
             {fid:"metaIp",          gid:"entry.196959886",   preset:locJson.clientIpAddr},
-            {fid:"metaHost",        gid:"entry.78982347",    preset:locJson.Host},
             {fid:"metaUserAgent",   gid:"entry.769190035",   preset:locJson.UserAgent},
         ],
     };
